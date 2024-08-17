@@ -1,0 +1,73 @@
+:root{
+    /* Colores principales */
+    --main-color: #1d2d44;
+    --light-main-color: #3e5c76;
+    --xlight-main-color: #748cab;
+    --dark-color: #0d1321;
+    --whitish-color: #f0ebd8;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--dark-color);
+}
+
+nav {
+    background-color: var(--main-color);
+    width: 100%;
+    max-height: 20vh;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav-principal{
+    padding: 1rem;
+}
+.nav-principal ul li {
+    min-width: 3rem;
+    background-color: var(--light-main-color);
+    height: 3rem;
+}
+
+.nav-secundaria{
+    padding: .5rem;
+    background-color: var(--xlight-main-color);
+}
+
+.nav-secundaria ul{
+    justify-content: space-evenly;
+}
+
+
+.nav-principal #logo{
+    margin-right: 20%;
+}
+
+.nav-principal #logo img{
+    height: 100%;
+}
+
+
+.nav-principal #searchbar{
+    width: 30%;
+    margin-right: 35%;
+    display: flex;
+}
+.nav-principal #searchbar div img{
+    width: 3rem;
+}
+.nav-principal #searchbar input{
+    width: 100%;
+    outline: none;
+    font-size: 1.3em;
+    color: #444;
+}
+
+
+.nav-principal #carrito{
+    margin-right: 1rem;
+}
