@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deportes101</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="nav-principal">
                 <ul>
-                    <li id="logo"><a href=""><img src="img/logobase.jpg" alt=""></a></li>
+                    <li id="logo"><a href=""><img src="img/img-web/logobase.jpg" alt=""></a></li>
                     <li id="searchbar">
                         <div>
-                            <img src="img/lupita.png" alt="">
+                            <img src="img/img-web/lupita.png" alt="">
                         </div>
                         <input type="text">
                     </li>
@@ -24,19 +25,11 @@
             </div>
             <div class="nav-secundaria">
                 <ul>
-                    <li>MARCAS</li>
-                    <li>DEPORTES</li>
-                    <li>ACCESORIOS</li>
-                    <li>INDUMENTARIA</li>
+                    <li><a href="">MARCAS</a></li>
+                    <li><a href="">DEPORTES</a></li>
+                    <li><a href="">ACCESORIOS</a></li>
+                    <li><a href="">INDUMENTARIA</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main>
-
-    </main>
-    <footer>
-
-    </footer>
-</body>
-</html>

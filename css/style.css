@@ -1,4 +1,4 @@
-:root{
+:root {
     /* Colores principales */
     --main-color: #1d2d44;
     --light-main-color: #3e5c76;
@@ -7,10 +7,11 @@
     --whitish-color: #f0ebd8;
 }
 
-*{
+* {
     margin: 0;
     box-sizing: border-box;
     color: var(--dark-color);
+    font-family: 'system-ui';
 }
 
 nav {
@@ -19,12 +20,12 @@ nav {
     max-height: 20vh;
 }
 
-nav ul{
+nav ul {
     display: flex;
     list-style: none;
 }
 
-.nav-principal{
+.nav-principal {
     padding: 1rem;
 }
 .nav-principal ul li {
@@ -33,7 +34,7 @@ nav ul{
     height: 3rem;
 }
 
-.nav-secundaria{
+.nav-secundaria {
     padding: .5rem;
     background-color: var(--xlight-main-color);
 }
@@ -41,26 +42,31 @@ nav ul{
 .nav-secundaria ul{
     justify-content: space-evenly;
 }
+.nav-secundaria ul li a {
+    text-decoration: none;
+    color: var(--whitish-color);
+    font-weight: bold;
+}
 
 
-.nav-principal #logo{
+.nav-principal #logo {
     margin-right: 20%;
 }
 
-.nav-principal #logo img{
+.nav-principal #logo img {
     height: 100%;
 }
 
 
-.nav-principal #searchbar{
+.nav-principal #searchbar {
     width: 30%;
     margin-right: 35%;
     display: flex;
 }
-.nav-principal #searchbar div img{
+.nav-principal #searchbar div img {
     width: 3rem;
 }
-.nav-principal #searchbar input{
+.nav-principal #searchbar input {
     width: 100%;
     outline: none;
     font-size: 1.3em;
@@ -68,6 +74,6 @@ nav ul{
 }
 
 
-.nav-principal #carrito{
+.nav-principal #carrito {
     margin-right: 1rem;
 }
