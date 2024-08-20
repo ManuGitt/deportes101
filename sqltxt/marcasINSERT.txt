@@ -1,0 +1,15 @@
+INSERT INTO marcas (id_marca, nombre_marca, img_marca) VALUES
+(1, 'Adidas', 'adidas.jpg'),
+(2, 'Asics', 'asics.jpg'),
+(3, 'Columbia', 'columbia.jpg'),
+(4, 'Fila', 'fila.jpg'),
+(5, 'Golty', 'golty.jpg'),
+(6, 'Jordan', 'jordan.jpg'),
+(7, 'Kappa', 'kappa.jpg'),
+(8, 'New Balance', 'newbalance.jpg'),
+(9, 'Nike', 'nike.jpg'),
+(10, 'Puma', 'puma.jpg'),
+(11, 'Reebok', 'reebok.jpg'),
+(12, 'The North Face', 'thenorthface.jpg'),
+(13, 'Under Armour', 'underarmour.jpg'),
+(14, 'Wilson', 'wilson.jpg');

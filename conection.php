@@ -1,6 +1,6 @@
 <?php
     $host = "localhost";
-    $bd = "deportes101";
+    $bd = "deportes101bd";
     $usuario = "root";
     $contrasenia = "";
     

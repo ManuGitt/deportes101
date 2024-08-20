@@ -5,7 +5,7 @@
     $listaMarcas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <main>
-  <h2 class="titulo">Encuentra a tus marcas favoritas</h2>
+  <h2 class="title">Encuentra a tus marcas favoritas</h2>
   <div class="sliderBrands">
     <div class="sliderBrands-track">
       <?php foreach ($listaMarcas as $marca) { ?>
@@ -19,5 +19,21 @@
       <?php } ?>
     </div>
   </div>
+
+
+  <section class="featuredProducts-section">
+    <h2 class="title">Productos destacados</h2>
+    <div class="featuredProducts-row">
+
+        <div class="productCard">
+          <img class="productCard-img" src="./img/img-products/zapatillasPrueba.jpg" alt="">
+          <div class="productCard-body">
+            <h3 class="productCard-title"></h3>
+            <p class="productCard-price"></p>
+          </div>
+        </div>
+
+    </div>
+  </section>
 </main>
 <?php include('./template/footer.php') ?>
