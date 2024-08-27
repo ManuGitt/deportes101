@@ -49,6 +49,8 @@
 
     </div>
   </section>
+  <section style="height: 100vh;"></section> <!-- para agregar la scrollbar y que el ancho de la página no se mueva 
+                                                  tanto cuando se usan los dropdown que superan el alto del viewport -->
 </main>
 
 <?php include('./template/footer.php') ?>
