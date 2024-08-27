@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-08-2024 a las 18:02:35
+-- Tiempo de generación: 23-08-2024 a las 12:30:10
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -196,6 +196,105 @@ CREATE TABLE `productos` (
   `marca_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`id_producto`, `nombre_producto`, `precio_producto`, `stock_producto`, `cantidadComprada`, `categoria_id`, `deporte_id`, `marca_id`) VALUES
+(1, 'Zapatillas de Running Adidas', 62000.00, 50, 200, 14, 14, 1),
+(2, 'Pelota de Fútbol Nike', 35000.00, 100, 500, 19, 1, 9),
+(3, 'Camiseta de Fútbol Boca Juniors', 55000.00, 80, 350, 1, 1, 9),
+(4, 'Raqueta de Tenis Wilson', 75000.00, 30, 100, 20, 5, 14),
+(5, 'Pelota de Básquet Spalding', 40000.00, 80, 300, 19, 3, 9),
+(6, 'Red de Voleibol Mikasa', 50000.00, 10, 60, 21, 6, 9),
+(7, 'Zapatillas de Básquet Nike', 70000.00, 40, 180, 14, 3, 9),
+(8, 'Bicicleta de Montaña Trek', 150000.00, 15, 20, 26, 16, 9),
+(9, 'Guantes de Boxeo Everlast', 45000.00, 25, 90, 31, 13, 9),
+(10, 'Casco de Ciclismo Giro', 38000.00, 50, 130, 24, 16, 9),
+(11, 'Malla de Natación Speedo', 29000.00, 60, 200, 7, 15, 9),
+(12, 'Saco de Boxeo RDX', 95000.00, 5, 40, 31, 13, 9),
+(13, 'Pelota de Rugby Gilbert', 42000.00, 70, 250, 19, 11, 9),
+(14, 'Protector Bucal Shock Doctor', 12000.00, 100, 400, 39, 11, 9),
+(15, 'Pelota de Handball Molten', 36000.00, 50, 150, 19, 12, 9),
+(16, 'Zapatillas de Fútbol Adidas', 64000.00, 45, 210, 14, 1, 1),
+(17, 'Short de Tenis Nike', 32000.00, 70, 100, 5, 5, 9),
+(18, 'Canilleras de Fútbol Puma', 18000.00, 90, 300, 40, 1, 10),
+(19, 'Bolsa de Deporte Reebok', 26000.00, 50, 200, 11, 1, 11),
+(20, 'Camiseta de Básquet Los Angeles Lakers', 48000.00, 60, 220, 1, 3, 9),
+(21, 'Medias de Compresión Under Armour', 20000.00, 80, 180, 13, 14, 13),
+(22, 'Pelota de Vóley Molten', 34000.00, 75, 270, 19, 6, 9),
+(23, 'Zapatillas de Running Asics', 67000.00, 35, 120, 14, 14, 2),
+(24, 'Casco de Rugby Canterbury', 45000.00, 30, 140, 24, 11, 9),
+(25, 'Mochila Deportiva Nike', 33000.00, 40, 170, 34, 14, 9),
+(26, 'Guantes de Arquería Reusch', 50000.00, 20, 90, 33, 11, 9),
+(27, 'Pantalón de Entrenamiento Adidas', 35000.00, 55, 210, 2, 14, 1),
+(28, 'Zapatillas de Vóley Mizuno', 59000.00, 30, 110, 14, 6, 9),
+(29, 'Casco de Escalada Petzl', 80000.00, 10, 40, 24, 16, 9),
+(30, 'Camiseta de Running New Balance', 28000.00, 65, 190, 1, 14, 8),
+(31, 'Pesa Rusa de 12kg', 70000.00, 20, 60, 28, 14, 9),
+(32, 'Zapatillas de Ciclismo Shimano', 83000.00, 25, 50, 14, 16, 9),
+(33, 'Bolsa de Dormir Doite', 70000.00, 15, 70, 31, 14, 9),
+(34, 'Zapatillas de Fútbol Puma', 65000.00, 50, 220, 14, 1, 10),
+(35, 'Camiseta de Tenis Roger Federer', 55000.00, 30, 150, 1, 5, 9),
+(36, 'Gorra Deportiva Adidas', 20000.00, 100, 350, 17, 14, 1),
+(37, 'Cuerda para Saltar Reebok', 15000.00, 70, 200, 27, 14, 11),
+(38, 'Traje de Neopreno Rip Curl', 120000.00, 10, 30, 10, 19, 9),
+(39, 'Short de Boxeo Venum', 34000.00, 60, 150, 5, 13, 9),
+(40, 'Bicicleta de Ruta Scott', 190000.00, 8, 12, 26, 16, 9),
+(41, 'Zapatillas de Trail Running Salomon', 75000.00, 25, 90, 14, 14, 9),
+(42, 'Camiseta de Básquet Chicago Bulls', 49000.00, 45, 160, 1, 3, 9),
+(43, 'Guantes de Ciclismo Pearl Izumi', 27000.00, 50, 180, 11, 16, 9),
+(44, 'Botella de Agua Deportiva Nalgene', 18000.00, 120, 400, 11, 14, 9),
+(45, 'Short de Fútbol Nike', 30000.00, 70, 190, 5, 1, 9),
+(46, 'Zapatillas de Skateboarding Vans', 55000.00, 40, 140, 14, 16, 9),
+(47, 'Mochila para Escalada Mammut', 92000.00, 15, 40, 34, 14, 9),
+(48, 'Chaleco Salvavidas Helly Hansen', 80000.00, 10, 20, 4, 14, 9),
+(49, 'Zapatillas de Running Reebok', 68000.00, 30, 110, 14, 14, 11),
+(50, 'Camisa de Entrenamiento Under Armour', 35000.00, 50, 180, 1, 14, 13),
+(51, 'Canilleras de Fútbol Nike', 16000.00, 90, 320, 40, 1, 9),
+(52, 'Red de Badminton Yonex', 38000.00, 15, 70, 21, 10, 9),
+(53, 'Zapatillas de Básquet Jordan', 70000.00, 35, 100, 14, 3, 6),
+(54, 'Bicicleta de Triatlón Cervelo', 220000.00, 5, 8, 26, 16, 9),
+(55, 'Gafas de Natación Arena', 22000.00, 60, 300, 39, 15, 9),
+(56, 'Banda Elástica de Resistencia Theraband', 15000.00, 100, 200, 29, 14, 9),
+(57, 'Guantes de Boxeo Twins Special', 47000.00, 25, 70, 31, 13, 9),
+(58, 'Pantalón de Running Salomon', 38000.00, 40, 140, 2, 14, 9),
+(59, 'Camiseta de Fútbol River Plate', 55000.00, 80, 280, 1, 1, 9),
+(60, 'Malla de Natación Adidas', 29000.00, 70, 200, 7, 15, 1),
+(61, 'Camiseta de Básquet Golden State Warriors', 47000.00, 45, 160, 1, 3, 9),
+(62, 'Zapatillas de Fútbol Nike', 67000.00, 40, 220, 14, 1, 9),
+(63, 'Casco de Bicicleta Specialized', 46000.00, 30, 120, 24, 16, 9),
+(64, 'Gafas de Sol Deportivas Oakley', 65000.00, 20, 80, 11, 16, 9),
+(65, 'Raqueta de Squash Dunlop', 43000.00, 35, 150, 20, 5, 9),
+(66, 'Zapatillas de Running Hoka One One', 72000.00, 25, 90, 14, 14, 9),
+(67, 'Pelota de Golf Titleist', 60000.00, 50, 300, 19, 9, 9),
+(68, 'Zapatillas de Fútbol Puma', 64000.00, 45, 210, 14, 1, 10),
+(69, 'Zapatillas de Running Nike', 70000.00, 30, 110, 14, 14, 9),
+(70, 'Guantes de Portero Adidas', 32000.00, 35, 140, 23, 1, 1),
+(71, 'Campera de Esquí The North Face', 85000.00, 20, 50, 8, 17, 12),
+(72, 'Set de Esquí Rossignol', 240000.00, 5, 15, 35, 17, 9),
+(73, 'Pantalón de Escalada Prana', 36000.00, 25, 90, 2, 16, 9),
+(74, 'Chaleco Salvavidas Sevylor', 78000.00, 10, 30, 4, 14, 9),
+(75, 'Casco de Bicicleta Bell', 45000.00, 30, 110, 24, 16, 9),
+(76, 'Campera de Running Asics', 50000.00, 35, 100, 8, 14, 2),
+(77, 'Zapatillas de Trail Running La Sportiva', 74000.00, 20, 70, 14, 14, 9),
+(78, 'Medias de Compresión Nike', 21000.00, 80, 150, 13, 14, 9),
+(79, 'Camiseta de Fútbol Adidas', 54000.00, 75, 250, 1, 1, 1),
+(80, 'Guantes de Ciclismo Gore', 28000.00, 45, 130, 11, 16, 9),
+(81, 'Zapatillas de Running Mizuno', 66000.00, 25, 110, 14, 14, 9),
+(82, 'Gorra de Ciclismo Castelli', 18000.00, 60, 150, 17, 16, 9),
+(83, 'Camiseta de Running Asics', 29000.00, 50, 170, 1, 14, 2),
+(84, 'Gafas de Natación Speedo', 21000.00, 55, 240, 39, 15, 9),
+(85, 'Pantalón de Tenis Lacoste', 32000.00, 35, 100, 2, 5, 9),
+(86, 'Banda Elástica de Resistencia Rogue', 16000.00, 85, 230, 29, 14, 9),
+(87, 'Pelota de Básquet Wilson', 43000.00, 45, 190, 19, 3, 14),
+(88, 'Zapatillas de Fútbol Nike', 67000.00, 45, 200, 14, 1, 9),
+(89, 'Campera de Ciclismo Castelli', 65000.00, 30, 90, 8, 16, 9),
+(90, 'Guantes de Boxeo Cleto Reyes', 49000.00, 25, 80, 31, 13, 9),
+(91, 'Pantalón de Running Nike', 34000.00, 40, 150, 2, 14, 9),
+(92, 'Mochila Deportiva Under Armour', 33000.00, 40, 160, 34, 14, 13),
+(93, 'Short de Fútbol Nike', 31000.00, 60, 170, 5, 1, 9);
+
 -- --------------------------------------------------------
 
 --
@@ -316,7 +415,7 @@ ALTER TABLE `marcas`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

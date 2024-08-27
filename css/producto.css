@@ -1,0 +1,126 @@
+:root {
+    /* Colores principales */
+    --main-color: #1d2d44;
+    --light-main-color: #3e5c76;
+    --xlight-main-color: #748cab;
+    --dark-color: #0d1321;
+    --whitish-color: #f0ebd8;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    
+}
+.product-container{
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 4px 4px 10px #72a8d8;
+
+}
+.photo-container{
+    width: 30rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+
+}
+.info-container p{
+    font-weight: 450;
+}
+.photo-container img{
+    width: 100%;
+}
+.info-container{
+    background-color: var(--xlight-main-color);
+    width: 40rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    
+    
+}
+.info-container p{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    
+}
+.description{
+    
+    width: 70%;
+}
+.description p{
+    font-size: 1.4rem;
+}
+.description a{
+    font-size: 1.5rem;
+    font-weight: 550;
+}
+.price{
+    font-size: 3rem;
+}
+
+.carrito-container{
+    position: absolute;
+    top: 5rem;
+    right: 6rem;
+    width: 15rem;
+    height: 4rem;
+    background-color: var(--main-color);
+    color: var(--whitish-color);
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.talles input{
+    display: none;
+    
+}
+
+.talles input + label:before{
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    background-color: #f0ebd8;
+    border: 1px solid gray;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: .5rem;
+    margin-bottom: .2rem;
+    
+}
+
+.talles input:checked + label:before{
+    background-color: var(--main-color);
+    box-sizing: border-box;
+    border: 5px solid var(--xlight-main-color);
+    padding: 4px;
+    transition: all .3s ease;
+}
+.talles p{
+    font-size: 1.5rem;
+    font-weight: 550;
+}

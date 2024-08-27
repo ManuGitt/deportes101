@@ -11,7 +11,7 @@
       <?php foreach ($listaMarcas as $marca) { ?>
       
         <div class="slideBrand">
-          <a href="">
+          <a href="<?php echo 'marca.php?id_marca='.$marca['id_marca'] ?>">
             <img src="./img/img-brands/<?php echo $marca['img_marca'] ?>" alt="<?php echo $marca['img_marca'] ?>">
           </a>
         </div>
@@ -24,9 +24,11 @@
   <?php $sentenciaSQL = $conexion -> prepare("SELECT * FROM productos");
         $sentenciaSQL -> execute();
         $listaProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+
         $sentenciaSQL2 = $conexion -> prepare("SELECT * FROM productos ORDER BY cantidadComprada DESC LIMIT 6");
         $sentenciaSQL2 -> execute();
         $productosDestacados = $sentenciaSQL2 ->fetchAll(PDO::FETCH_ASSOC);
+
   ?>
 
   <section class="featuredProducts-section">
@@ -34,7 +36,7 @@
     <div class="featuredProducts-row">
 
     <?php foreach ($productosDestacados as $producto) { ?>
-      <a href="">
+      <a href=<?php echo "./producto.php?id_producto=".$producto['id_producto'] ?>>
         <div class="productCard">
             <img class="productCard-img" src="./img/img-products/zapatillasPrueba.jpg" alt="">
             <div class="productCard-body">
@@ -48,6 +50,5 @@
     </div>
   </section>
 </main>
-<img src="./img/img-products/zapatillasPrueba.jpg" alt="">
 
 <?php include('./template/footer.php') ?>
