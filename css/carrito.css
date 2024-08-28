@@ -1,0 +1,81 @@
+:root {
+    /* Colores principales */
+    --main-color: #1d2d44;
+    --light-main-color: #3e5c76;
+    --xlight-main-color: #748cab;
+    --dark-color: #0d1321;
+    --whitish-color: #f0ebd8;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.contenedor-carrito{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+   
+}
+.container-product{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container-info{
+    width: 50%;
+    height: 100%;
+    
+}
+.info{
+    width: 80%;
+    height: 17%;
+    border-radius: .5rem;
+    margin-top: 3rem;
+    background-color: var(--xlight-main-color);
+    margin-left: 5rem;
+    overflow: hidden;
+    box-shadow: 4px 4px 10px var(--light-main-color);
+    display: flex;
+    
+}
+.product{
+    width: 80%;
+    height: 90%;
+    border-radius: .5rem;
+    background-color: var(--xlight-main-color);
+    box-shadow: 4px 4px 10px var(--light-main-color);   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.product img{
+    width: 10rem;
+}
+
+.info img{
+    height: 100%;
+}
+.info p{
+    margin: 1rem;
+}
+.cant-product{ 
+    width: 15%;
+    height: 60%;
+    border: solid;
+}
+.total-product{
+    width: 30%;
+    height: 100%;
+    border: solid; 
+    
+}
+.info-hijo{
+    display: flex;
+    align-items: center;
+}

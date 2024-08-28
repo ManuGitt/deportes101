@@ -5,6 +5,7 @@
     $listaMarcas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <main>
+  <?php echo $nombreUsuario ?>
   <h2 class="title">Encuentra a tus marcas favoritas</h2>
   <div class="sliderBrands">
     <div class="sliderBrands-track">

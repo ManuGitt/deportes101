@@ -21,7 +21,7 @@ echo $id_deporte;
     <div class="products-row">
 
     <?php foreach ($listaProductos as $producto) { ?>
-      <a href="" class="productCard-link">
+      <a href=<?php echo "./producto.php?id_producto=".$producto['id_producto'] ?> class="productCard-link">
         <div class="productCard">
             <img class="productCard-img" src="./img/img-products/zapatillasPrueba.jpg" alt="">
             <div class="productCard-body">

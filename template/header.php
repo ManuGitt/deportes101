@@ -1,4 +1,10 @@
 <?php include('./conection.php') ?>
+<?php
+  session_start();
+  if (isset($_SESSION['usuario']) && $_SESSION['usuario'] == "ok") {
+    $nombreUsuario = $_SESSION['nombreUsuario'];
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +15,8 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/producto.css">
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./css/carrito.css">
 </head>
 
 <body>
@@ -25,8 +33,12 @@
             <input type="text">
           </li>
 
-          <li id="carrito" class="navbar-item"><img src="img/img-web/MdiCart.png" alt=""></li>
-          <li id="account" class="navbar-item"><img src="img/img-web/PhUserCircle.png" alt=""></li>
+          <li id="carrito" class="navbar-item navbar-item2">
+          <a href=""><img src="img/img-web/MdiCart.png" alt=""></a>  
+          </li>
+          <li id="account" class="navbar-item navbar-item2">
+            <a href="registro.php"><img src="img/img-web/PhUserCircle.png" alt=""></a> 
+          </li>
         </ul>
       </div>
 
