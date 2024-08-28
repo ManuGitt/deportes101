@@ -88,6 +88,14 @@ nav ul {
     width: 100%;
 
 }
+.nav-principal #account {
+    position: relative;
+
+}
+.nav-principal #account:hover .dropdown-content {
+    display: block;
+    top: 100%;
+}
 
 
 .nav-secundaria {
@@ -112,6 +120,7 @@ nav ul {
 .dropdown-content {
     display: none;
     position: absolute;
+
     background-color: var(--xlight-main-color);
     min-width: 16%;
     z-index: 1;

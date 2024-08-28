@@ -1,11 +1,15 @@
 <?php include('./template/header.php') ?>
+<?php 
+  echo $nombreUsuario;
+?>
 <?php include('./conection.php'); 
     $sentenciaSQL = $conexion -> prepare("SELECT * FROM marcas");
     $sentenciaSQL -> execute();
     $listaMarcas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 ?>
+
 <main>
-  <?php echo $nombreUsuario ?>
+
   <h2 class="title">Encuentra a tus marcas favoritas</h2>
   <div class="sliderBrands">
     <div class="sliderBrands-track">

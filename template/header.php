@@ -1,7 +1,7 @@
 <?php include('./conection.php') ?>
 <?php
   session_start();
-  if (isset($_SESSION['usuario']) && $_SESSION['usuario'] == "ok") {
+  if (isset($_SESSION['check']) and $_SESSION['check'] == "ok") {
     $nombreUsuario = $_SESSION['nombreUsuario'];
   }
 ?>
@@ -36,8 +36,13 @@
           <li id="carrito" class="navbar-item navbar-item2">
           <a href=""><img src="img/img-web/MdiCart.png" alt=""></a>  
           </li>
-          <li id="account" class="navbar-item navbar-item2">
-            <a href="registro.php"><img src="img/img-web/PhUserCircle.png" alt=""></a> 
+          <li id="account" class="navbar-item navbar-item2 dropdown">
+            <a href=""><img src="img/img-web/PhUserCircle.png" alt=""></a> 
+            <div class="dropdown-content">
+              <a href="login.php">Iniciar sesión</a>
+              <a href="registro.php">Registrarse</a>
+              <a href="cerrar.php">Cerrar sesión</a>
+            </div>
           </li>
         </ul>
       </div>
