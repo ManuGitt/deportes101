@@ -1,0 +1,208 @@
+:root {
+    /* Colores principales */
+    --main-color: #1d2d44;
+    --light-main-color: #3e5c76;
+    --xlight-main-color: #748cab;
+    --dark-color: #0d1321;
+    --whitish-color: #f0ebd8;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--dark-color);
+    font-family: 'system-ui';
+}
+
+nav {
+    background-color: var(--main-color);
+    width: 100%;
+    max-height: 20vh;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    
+}
+
+.nav-principal {
+    padding: 1rem;
+}
+.nav-principal ul li {
+    min-width: 3rem;
+    height: 3rem;
+}
+.nav-principal ul .navbar-item2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-principal ul li a {
+    height: 100%;
+    width: 50%;
+}
+.nav-principal #logo img {
+    height: 100%;
+}
+
+.nav-principal #searchbar {
+    width: 60%;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.nav-principal #searchbar div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+}
+.nav-principal #searchbar div img {
+    width: 50%;
+}
+.nav-principal #searchbar input {
+    width: 100%;
+    padding-left: .4rem;
+    outline: none;
+    font-size: 1.3em;
+    color: #444;
+    border-radius: 0 50px 50px 0;
+    border: none;
+}
+.searcher{
+    background-color: var(--light-main-color);
+}
+.navbar-item{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.nav-principal #carrito a img {
+    width: 100%;
+
+}
+.nav-principal #account a img {
+    width: 100%;
+
+}
+.nav-principal #account {
+    position: relative;
+
+}
+.nav-principal #account:hover .dropdown-content {
+    display: block;
+    top: 100%;
+}
+
+
+.nav-secundaria {
+    padding: .5rem;
+    background-color: var(--xlight-main-color);
+}
+
+.nav-secundaria ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-secundaria ul li a {
+    text-decoration: none;
+    color: var(--whitish-color);
+    font-weight: bold;
+}
+.dropbtn {
+    text-decoration: none;
+    color: var(--whitish-color);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+
+    background-color: var(--xlight-main-color);
+    min-width: 16%;
+    z-index: 1;
+}
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.featuredProducts-section {
+    width: 100%;
+    height: 52vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.productsList {
+    width: 100%;
+    height: 52vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products-row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.productCard-link {
+    width: 15%;
+    text-decoration: none;
+}
+
+.featuredProducts-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.featuredProducts-row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+.productCard {
+    width: 100%;
+    height: 100%;
+    box-shadow: 4px 4px 10px #a0c3e2;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.productCard img {
+    width: 100%;
+}
+.productCard-body {
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+    font-size: 1rem;
+}
+.productCard-body h3 {
+    font-size: 1rem;
+}
+
+.productCard-price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--light-main-color);
+}
