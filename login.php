@@ -1,19 +1,19 @@
 <?php
 include('./conection.php');
 
-
 if ($_POST) {
     $sentenciaSQL = $conexion->prepare("SELECT * FROM usuarios WHERE nombre_usuario = :username");
     $sentenciaSQL->bindParam(':username', $_POST['usuario']);
     $sentenciaSQL->execute();
     $usuario = $sentenciaSQL->fetch(PDO::FETCH_LAZY);
     if ($_POST['usuario'] == $usuario['nombre_usuario'] && $_POST['password'] == $usuario['contrasenia_usuario']) {
+        session_start();
         $_SESSION['check'] = "ok";
         $sentenciaSQL = $conexion->prepare("SELECT * FROM usuarios WHERE nombre_usuario = :username");
         $sentenciaSQL->bindParam(':username', $_POST['usuario']);
         $sentenciaSQL->execute();
         $usuario = $sentenciaSQL->fetch(PDO::FETCH_LAZY);
-        $_SESSION['nombreUsuario'] = $usuario['nombre_usuario'];
+        $_SESSION['usuario'] = $usuario['nombre_usuario'];
         header('Location:index.php');
     } else {
         $mensaje = "Error: El usuario o contraseña son incorrectos";

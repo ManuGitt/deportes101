@@ -1,4 +1,3 @@
-<?php include('./template/header.php') ?>
 <?php
 include('./conection.php');
 
@@ -38,6 +37,10 @@ if ($_POST) {
             $sentenciaSQL->bindParam(':correo', $email);
             $sentenciaSQL->bindParam(':carrito_id', $carrito_id);
             $sentenciaSQL->execute();
+
+            $_SESSION['usuario'] = $username;
+
+            header('Location:index.php');
         } else {
             $mensajeMail = "El correo electrónico ya está en uso";
         }
@@ -61,11 +64,22 @@ if ($_POST) {
     } */
 
 ?>
+<?php include('./template/header.php') ?>
 <main>
     <div class="container-login">
         <?php  if (isset($mensajeUsername)) { ?>
             <div class="alert alert-danger" role="alert">
-                  <?php echo $mensajeUsername; ?>         
+                <?php echo $mensajeUsername; ?>         
+            </div>
+        <?php } ?>
+        <?php  if (isset($mensajeMail)) { ?>
+            <div class="alert alert-danger" role="alert">
+                <?php echo $mensajeMail; ?>         
+            </div>
+        <?php } ?>
+        <?php  if (isset($mensajeUsername) && isset($mensajeMail)) { ?>
+            <div class="alert alert-danger" role="alert">
+                <?php echo $mensajeUsername.$mensajeMail; ?>         
             </div>
         <?php } ?>
         <form action="" method="POST">
@@ -79,7 +93,7 @@ if ($_POST) {
             </div>
            
 
-            <input type="submit" value="Crear cuenta">
+            <input type="submit" value="Crear cuenta" onclick="evitarEvento();">
         </form>
         <div class="register">
             <h2>¿Ya tienes una cuenta?</h2>

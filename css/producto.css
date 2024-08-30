@@ -89,9 +89,14 @@ body, html {
     height: 4rem;
     background-color: var(--main-color);
     color: var(--whitish-color);
+    font-size: 1.4rem;
     border: none;
+    text-decoration: none;
     border-radius: .5rem;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .talles input{

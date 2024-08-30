@@ -1,4 +1,3 @@
-<?php include('./template/header.php') ?>
 <?php include('./conection.php') ?>
 
 <?php
@@ -6,9 +5,10 @@
     $sentenciaSQL = $conexion->prepare("SELECT * FROM productos WHERE id_producto = :id_producto");
     $sentenciaSQL->bindParam(':id_producto', $id_producto);
     $sentenciaSQL->execute();
-    $producto = $sentenciaSQL->fetch(PDO::FETCH_LAZY);
+    $producto = $sentenciaSQL->fetch(PDO::FETCH_LAZY);    
 ?>
 
+<?php include('./template/header.php'); echo $nombreUsuario;?>
 <div class="container">
         <div class="product-container">
             <div class="photo-container">
@@ -47,9 +47,9 @@
                 
                 
             </div>
-            <button class="carrito-container">
+            <a href="agregarProducto.php?id_producto=<?php echo $id_producto ?>" class="carrito-container">
                 Añadir al carrito
-            </button>
+            </a>
         
         </div>
     </div>
