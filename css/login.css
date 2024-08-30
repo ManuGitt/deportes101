@@ -12,7 +12,9 @@
     text-align: center;
     background-color: var(--whitish-color);
 }
-
+form{
+    width: 80%;
+}
 .container-login h1{
     line-height: 5rem;
 }
@@ -70,4 +72,10 @@
 }
 .register a:hover{
     border-bottom: 2px solid var(--light-main-color);
+}
+
+.nombreYApellido{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
 }
