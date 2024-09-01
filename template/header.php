@@ -1,4 +1,4 @@
-<?php include('./conection.php') ?>
+<?php include('./conection.php');?>
 <?php
   session_start();
   if (isset($_SESSION['usuario'])) {

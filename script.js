@@ -3,9 +3,9 @@ function evitarEvento(evt) {
 }
 
 function actualizarPrecio() {
-    let cantidad = document.getElementById('cantidad');
-    let precioUnitario = document.getElementById('precioUnitario_card');
-    let precioTotal = document.getElementById('precioTotal_card');
+    let cantidad = document.querySelector('.cant_product');
+    let precioUnitario = document.querySelector('.precioUnitario_card');
+    let precioTotal = document.querySelector('.precioTotal_card');
 
     precioTotal.innerText = parseInt(precioUnitario.textContent)*parseInt(cantidad.value); 
 }

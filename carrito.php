@@ -6,28 +6,17 @@
 <div class="container-info">
 
 <?php
+    /* error_reporting(0); */
+
     $userQuery = $conexion->prepare("SELECT * FROM usuarios WHERE nombre_usuario = :usuario");
     $userQuery->bindParam(':usuario', $_SESSION['usuario']);
     $userQuery->execute();
     $usuario = $userQuery->fetch(PDO::FETCH_LAZY);
-
-    $sentenciaSQL = $conexion->prepare("SELECT * FROM carrito_producto WHERE carrito_id = :carrito_id");
+    
+    $sentenciaSQL = $conexion->prepare("SELECT * FROM carrito_producto cp INNER JOIN productos p ON cp.producto_id = p.id_producto WHERE cp.carrito_id = :carrito_id;");
     $sentenciaSQL->bindParam(':carrito_id', $usuario['carrito_id']);
     $sentenciaSQL->execute();
-    $carrito_productos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
-    
-    $productosId;
-    foreach ($carrito_productos as $producto) {
-        $productosId[] = $producto['producto_id'];
-    }
-
-    $productos = [];
-    foreach ($productosId as $id) {
-        $sentenciaSQL = $conexion->prepare("SELECT * FROM productos WHERE id_producto = :id_producto");
-        $sentenciaSQL->bindParam(':id_producto', $id);
-        $sentenciaSQL->execute();
-        $productos[] = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
-    }
+    $productos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
     foreach ($productos as $producto) {
 ?>
@@ -38,7 +27,7 @@
         <p id="precioUnitario_card"><?php echo $producto['precio_producto']; ?></p>
         <input type="number" name="cant_producto" class="cant-product" id="cantidad" value="1" min="1" max="10" onchange="actualizarPrecio()">
         <p>TOTAL</p>
-        <p id="precioTotal_card"></p>
+        <p id="precioTotal_card"><?php echo number_format($producto['precio_producto'], 0) ?></p>
     </div>
 </div>
 <?php } ?>
