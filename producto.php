@@ -5,7 +5,12 @@
     $sentenciaSQL = $conexion->prepare("SELECT * FROM productos WHERE id_producto = :id_producto");
     $sentenciaSQL->bindParam(':id_producto', $id_producto);
     $sentenciaSQL->execute();
-    $producto = $sentenciaSQL->fetch(PDO::FETCH_LAZY);    
+    $producto = $sentenciaSQL->fetch(PDO::FETCH_LAZY);  
+    
+    $sentenciaSQL = $conexion->prepare("SELECT * FROM carrito_producto WHERE producto_id = :producto_id");
+    $sentenciaSQL->bindParam(':producto_id', $id_producto);
+    $sentenciaSQL->execute();
+    $prod = $sentenciaSQL->fetch(PDO::FETCH_LAZY);
 ?>
 
 <?php include('./template/header.php'); echo $nombreUsuario;?>
@@ -47,9 +52,17 @@
                 
                 
             </div>
-            <a href="agregarProducto.php?id_producto=<?php echo $id_producto ?>" class="carrito-container">
-                Añadir al carrito
-            </a>
+
+            <?php if(empty($prod)) { ?>
+                <a href="agregarProducto.php?id_producto=<?php echo $id_producto ?>" class="carrito-container">
+                    Agregar al carrito
+                </a>
+            <?php } else { ?>
+                <a href="agregarProducto.php?id_producto=<?php echo $id_producto ?>" class="carrito-container"> 
+                    Ya se encuentra en el carrito
+                </a>
+            <?php } ?>
+            
         
         </div>
     </div>

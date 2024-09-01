@@ -9,3 +9,7 @@ function actualizarPrecio() {
 
     precioTotal.innerText = parseInt(precioUnitario.textContent)*parseInt(cantidad.value); 
 }
+
+
+
+

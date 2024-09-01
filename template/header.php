@@ -42,8 +42,9 @@
               <?php if (!isset($_SESSION['usuario'])) { ?>
                 <a href="login.php">Iniciar sesión</a>
                 <a href="registro.php">Registrarse</a>
+              <?php } if (isset($_SESSION['usuario'])) {?>
+                <a href="cerrar.php">Cerrar sesión</a>
               <?php } ?>
-              <a href="cerrar.php">Cerrar sesión</a>
             </div>
           </li>
         </ul>

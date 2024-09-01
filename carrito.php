@@ -18,19 +18,24 @@
     $sentenciaSQL->execute();
     $productos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
-    foreach ($productos as $producto) {
+    foreach ($productos as $index => $producto) {
 ?>
 <div class="info">
     <div class="info-hijo">
         <img src="./img/img-products/zapatillasPrueba.jpg" alt="foto">
         <p><?php echo $producto['nombre_producto']; ?></p>
-        <p id="precioUnitario_card"><?php echo $producto['precio_producto']; ?></p>
-        <input type="number" name="cant_producto" class="cant-product" id="cantidad" value="1" min="1" max="10" onchange="actualizarPrecio()">
+        <p class="precioUnitario_card"><?php echo $producto['precio_producto']; ?></p>
+        <input type="number" name="cant_producto" class="cant-product" value="1" min="1" max="10" onchange="modificarSubtotales(<?php echo $index ?>)">
         <p>TOTAL</p>
-        <p id="precioTotal_card"><?php echo number_format($producto['precio_producto'], 0) ?></p>
+        <p class="precioTotal_card"><?php echo $producto['precio_producto'] ?></p>
     </div>
 </div>
-<?php } ?>
+<?php } 
+
+if (empty($productos)) {
+    echo "Agrega productos a tu carrito";
+}
+?>
 
 
 </div>
@@ -38,13 +43,15 @@
     <div class="product">
         <p>CONFIRMA TU COMPRA</p>
         <p>Total</p>
-        <p>$120.000</p>
+        <p class="total"></p>
         <button>MEDIOS DE PAGO</button>
-        <p>Segui buscando lo mejor en <a href="#">101 deportes</a></p>
+        <p>Segui buscando lo mejor en <a href="#">Deportes101</a></p>
         <img src="./img/img-web/logobase.jpg" alt="#">
     </div>
     
 </div>
 </div>
+
+<script src="./scriptCarrito.js"></script>
 
 <?php include('./template/footer.php') ?>
