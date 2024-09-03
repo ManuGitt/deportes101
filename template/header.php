@@ -2,7 +2,11 @@
 <?php
   session_start();
   if (isset($_SESSION['usuario'])) {
-    $nombreUsuario = $_SESSION['usuario'];
+    if ($_SESSION['usuario'] != "admin") {
+      $nombreUsuario = $_SESSION['usuario'];
+    } else {
+      $_SESSION = array();
+    }
   }
 ?>
 <!DOCTYPE html>
@@ -34,7 +38,11 @@
           </li>
 
           <li id="carrito" class="navbar-item navbar-item2">
-          <a href="carrito.php"><img src="img/img-web/MdiCart.png" alt=""></a>  
+            <?php if(!isset($_SESSION['usuario'])) { ?>
+            <a href="login.php"><img src="img/img-web/MdiCart.png" alt=""></a>  
+            <?php } else {?>
+            <a href="carrito.php"><img src="img/img-web/MdiCart.png" alt=""></a>  
+            <?php } ?>
           </li>
           <li id="account" class="navbar-item navbar-item2 dropdown">
             <a href=""><img src="img/img-web/PhUserCircle.png" alt=""></a> 
