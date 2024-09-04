@@ -28,6 +28,7 @@ if ($_POST) {
             $apellido = $_POST['apellido'];
             $carrito_id = $carrito['id_carrito'];
             
+            $_SESSION['usuario'] = $username;
 
             $sentenciaSQL = $conexion->prepare("INSERT INTO usuarios(id_usuario, nombre, apellido, nombre_usuario, contrasenia_usuario, correo_usuario, admin, carrito_id) VALUES (NULL,:nombre,:apellido,:username,:password,:correo,0,:carrito_id);");
             $sentenciaSQL->bindParam(':nombre', $nombre);
@@ -38,8 +39,6 @@ if ($_POST) {
             $sentenciaSQL->bindParam(':carrito_id', $carrito_id);
             $sentenciaSQL->execute();
 
-            $_SESSION['usuario'] = $username;
-
             header('Location:index.php');
         } else {
             $mensajeMail = "El correo electrónico ya está en uso";
@@ -48,20 +47,6 @@ if ($_POST) {
         $mensajeUsername = "El nombre de usuario ya está en uso";
     }
 }
-
-    /* $sentenciaSQL = $conexion->prepare("SELECT * FROM usuarios WHERE id_usuario = 1");
-    $sentenciaSQL->execute();
-    $usuario = $sentenciaSQL->fetch(PDO::FETCH_LAZY);
-    if ($_POST['usernameAdmin'] == $usuario['nombre_usuario'] && $_POST['passwordAdmin'] == $usuario['cont_usuario']) {
-        $_SESSION['usuario'] = "ok";
-        $sentenciaSQL = $conexion->prepare("SELECT nombre_usuario FROM usuarios WHERE Id_usuario = 1");
-        $sentenciaSQL->execute();
-        $usuario = $sentenciaSQL->fetch(PDO::FETCH_LAZY);
-        $_SESSION['nombreUsuario'] = $usuario['nombre_usuario'];
-        header('Location:inicio.php');
-    } else {
-        $mensaje = "Error: El usuario o contraseña son incorrectos";
-    } */
 
 ?>
 <?php include('./template/header.php') ?>

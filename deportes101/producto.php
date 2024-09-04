@@ -48,12 +48,13 @@
                 <label for="radio-5">41</label>
               
                </div>
-               
-                
-                
             </div>
-
-            <?php if(empty($prod)) { ?>
+            <?php if(!isset($_SESSION['usuario'])) { ?>
+                <a href="login.php" class="carrito-container">
+                    Agregar al carrito
+                </a>
+            <?php } else {?>
+                <?php if(empty($prod)) { ?>
                 <a href="agregarProducto.php?id_producto=<?php echo $id_producto ?>" class="carrito-container">
                     Agregar al carrito
                 </a>
@@ -62,8 +63,7 @@
                     Ya se encuentra en el carrito
                 </a>
             <?php } ?>
-            
-        
+            <?php } ?>      
         </div>
     </div>
 
