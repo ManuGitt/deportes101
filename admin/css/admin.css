@@ -1,3 +1,12 @@
+:root {
+    /* Colores principales */
+    --main-color: #1d2d44;
+    --light-main-color: #3e5c76;
+    --xlight-main-color: #748cab;
+    --dark-color: #0d1321;
+    --whitish-color: #f0ebd8;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +15,22 @@
     font-family: system-ui;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 body {
-    width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .login-container {
     width: 25%;
+    height: 30%;
     padding: 1rem;
     margin: 0 auto;
 
@@ -49,3 +67,127 @@ input[type="text"], input[type="password"] {
     padding-left: .5rem;
     outline: none;
 }
+
+.container {
+    width: 100vw;
+    height: auto;
+    margin-top: 10vh; margin-bottom: 15vh; 
+    padding: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-container {
+    width: 90%;
+    height: 100%;
+    margin-top: 10vh;
+    overflow-y: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    /* border: 2px solid var(--light-main-color); */
+    text-align: left;
+}
+
+th {
+    padding-left: .5rem;
+}
+
+td {
+    padding: .5rem 0 .5rem .7rem;
+}
+
+thead {
+    height: 2rem;
+    background-color: #d1dbe6;
+    position: sticky;
+    top: 0;
+    right: 0;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e7eaee;
+}
+
+tbody tr:hover {
+    background-color: #dddfe2;
+}
+
+footer {
+    width: 100%;
+    height: 80vh;
+    padding: 0 1rem 1rem 1rem;
+    position: absolute;
+    bottom: -70vh;
+    font-size: 2rem;
+    font-weight: 400;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: var(--xlight-main-color);
+    transition: .3s all;
+}
+
+footer h2 {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.abrir {
+    bottom: 0 !important; 
+}
+
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    cursor: pointer;
+}
+
+.form-container {
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.form-group-left {
+    width: 40%; 
+    height: 100%;
+    padding: 1rem;
+    border: solid;
+}
+.form-group-right {
+    width: 60%;
+    height: 100%;
+    padding: 1rem;
+    border: solid;
+}
+
+.form-group-rightTop {
+    width: 100%;
+    display: flex;
+    border: solid
+}
+
