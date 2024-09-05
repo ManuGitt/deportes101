@@ -66,7 +66,7 @@
                         </select>
                     </div>
                     <form method="POST">
-                        <button type="submit" value="agregar" name="accion">Agregar producto</button>
+                        <button type="submit" value="agregar" name="accion" class="agregarProdBtn">Agregar producto</button>
                     </form>
                     
                    

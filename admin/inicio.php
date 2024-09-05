@@ -10,7 +10,6 @@ include('./template/header.php'); ?>
 
 if ($_POST) {
   $txtID = (isset($_POST['txtID'])) ? $_POST['txtID'] : "";
-  echo "<br><br><br><br><br>".$txtID;
   $nombre = (isset($_POST['nombre'])) ? $_POST['nombre'] : "";
   $precio = (isset($_POST['precio'])) ? $_POST['precio'] : "";
   $stock = (isset($_POST['stock'])) ? $_POST['stock'] : "";
@@ -51,14 +50,13 @@ if ($_POST) {
       $sentenciaSQL->bindParam(':id', $txtID);
       $sentenciaSQL->execute();
       break;
+    case "modificar":
+      
+      break;
   }
   
 }
  
-
-
-
-    
   //echo $nombreUsuario;
 
   $sentenciaSQL = $conexion->prepare("SELECT * FROM productos");
@@ -108,13 +106,17 @@ if ($_POST) {
         ?>
         
       <tr>
-        <td class="delete-container">
+        <td class="accion-container">
           <form method="POST">
             <input type="hidden" name="txtID" value="<?php echo $producto['id_producto']?>">
             <button name="accion" value="eliminar" type="submit" idTupla="<?php echo ($id+1) ?>">
+              <img src="../img/img-web/deleteIcon.png" alt="delete" class="deleteIcon">
+            </button>
+            <button name="accion" value="modificar" type="submit" idTupla="<?php echo ($id+1) ?>" class="editIcon">
+              <img src="../img/img-web/editIcon.png" alt="edit" class="editIcon">
+            </button>
           </form>
-            <img src="../img/img-web/deleteIcon.png" alt="delete" class="deleteIcon"></td>
-          </button>
+        </td>
         <td><?php echo $producto['id_producto'] ?></td>
         <td><?php echo $producto['nombre_producto'] ?></td>
         <td><?php echo $marca['nombre_marca'] ?></td>

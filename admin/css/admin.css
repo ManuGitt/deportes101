@@ -220,13 +220,17 @@ form {
     box-shadow: 0 0 1rem 2px var(--main-color);
 }
 
-.delete-container button{
-    width: 25%;
+.accion-container form {
+    width: 100%;
+    height: 100%;
+}
+.accion-container form button{
+    width: 50%;
     background-color: transparent;
     border: none;
 }
 
-.deleteIcon {
-    width: 100%;
+.deleteIcon, .editIcon {
+    width: 50%;
     cursor: pointer;
 }

@@ -30,7 +30,6 @@
     width: 50%;
     height: 100%;
     overflow-y: auto;
-    border:solid;
 }
 .info{
     width: 80%;
@@ -72,8 +71,7 @@
 }
 .total-product{
     width: 30%;
-    height: 100%;
-    border: solid; 
+    height: 100%; 
     
 }
 .info-hijo{

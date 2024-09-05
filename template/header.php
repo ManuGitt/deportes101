@@ -4,7 +4,6 @@
   if (isset($_SESSION['usuario'])) {
     if ($_SESSION['usuario'] != "admin") {
       $nombreUsuario = $_SESSION['usuario'];
-      print_r($_SESSION);
     } else {
       $_SESSION = array();
     }

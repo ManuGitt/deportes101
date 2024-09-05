@@ -34,7 +34,7 @@
                 </div>
                 
 
-               <div class="talles">
+              <!--  <div class="talles">
                 <p>TALLES</p>
                 <input type="radio"  id="radio-1" name="talle" value="37">
                 <label for="radio-1">37</label>
@@ -47,7 +47,7 @@
                 <input type="radio"  id="radio-5" name="talle" value="40">
                 <label for="radio-5">41</label>
               
-               </div>
+               </div> -->
             </div>
             <?php if(!isset($_SESSION['usuario'])) { ?>
                 <a href="login.php" class="carrito-container">
