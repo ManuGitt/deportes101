@@ -22,7 +22,7 @@
 ?>
 <div class="info">
     <div class="info-hijo">
-        <img src="./img/img-products/zapatillasPrueba.jpg" alt="foto">
+        <img src="./img/img-products/<?php echo $producto['img_producto'] ?>" alt="foto">
         <p><?php echo $producto['nombre_producto']; ?></p>
         <p class="precioUnitario_card"><?php echo $producto['precio_producto']; ?></p>
         <input type="number" name="cant_producto" class="cant-product" value="1" min="1" max="10" onchange="modificarSubtotales(<?php echo $index ?>)">

@@ -163,7 +163,7 @@ footer h2 {
 
 .form-container {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 5rem);
 }
 
 form {
@@ -176,18 +176,57 @@ form {
     width: 40%; 
     height: 100%;
     padding: 1rem;
-    border: solid;
 }
 .form-group-right {
     width: 60%;
     height: 100%;
     padding: 1rem;
-    border: solid;
 }
 
 .form-group-rightTop {
     width: 100%;
+    height: 30%;
     display: flex;
-    border: solid
+}
+.rightTop-items {
+    width: 50%;
+
 }
 
+.form-group-rightBottom {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    position: relative;
+}
+
+
+.rightBottom-items {
+    width: 100%;
+    height: 50%;
+}
+
+.label-footer {
+    font-size: 1rem;
+}
+
+/* Button agregar */
+#submitAgregar{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2rem;
+    width: 10rem;
+    box-shadow: 0 0 1rem 2px var(--main-color);
+}
+
+.delete-container button{
+    width: 25%;
+    background-color: transparent;
+    border: none;
+}
+
+.deleteIcon {
+    width: 100%;
+    cursor: pointer;
+}

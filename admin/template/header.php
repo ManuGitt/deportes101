@@ -19,7 +19,7 @@
   <ul>
     <li><a href="">Administrador</a></li>
     <li><a href="">Productos</a></li>
-    <li><a href="">Ver sitio web</a></li>
+    <li><a href="../index.php">Ver sitio web</a></li>
     <li><a href="../cerrar.php">Cerrar sesión</a></li>
   </ul>
 </nav>

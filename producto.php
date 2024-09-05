@@ -17,7 +17,7 @@
 <div class="container">
         <div class="product-container">
             <div class="photo-container">
-                <img src="./img/img-products/zapatillasPrueba.jpg" alt="">
+                <img src="./img/img-products/<?php echo $producto['img_producto'] ?>" alt="">
             </div>
             <div class="info-container">
                 <p><?php echo $producto['nombre_producto'] ?></p>
